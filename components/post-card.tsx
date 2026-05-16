@@ -8,22 +8,22 @@ type PostCardProps = {
   category: string;
 };
 
-const categoryConfig: Record<string, { label: string; icon: string; unsplashId: string }> = {
-  electricidad: { label: "Electricidad", icon: "⚡", unsplashId: "IzFr8kB7Svc" },
-  plomeria: { label: "Plomería", icon: "🔧", unsplashId: "rdAKQYI3Hnk" },
-  gas: { label: "Gas", icon: "🔥", unsplashId: "bgb56tnWSYI" },
-  electrodomesticos: { label: "Electrodomésticos", icon: "🏠", unsplashId: "5SnHjsXHGLQ" },
+const categoryConfig: Record<string, { label: string; icon: string; img: string }> = {
+  electricidad: { label: "Electricidad", icon: "⚡", img: "https://picsum.photos/seed/electricidad/800/400" },
+  plomeria: { label: "Plomería", icon: "🔧", img: "https://picsum.photos/seed/plomeria/800/400" },
+  gas: { label: "Gas", icon: "🔥", img: "https://picsum.photos/seed/gas/800/400" },
+  electrodomesticos: { label: "Electrodomésticos", icon: "🏠", img: "https://picsum.photos/seed/electrodomesticos/800/400" },
 };
 
 export function PostCard({ slug, title, description, date, category }: PostCardProps) {
-  const config = categoryConfig[category] ?? { label: "General", icon: "📝", unsplashId: "" };
+  const config = categoryConfig[category] ?? { label: "General", icon: "📝", img: "https://picsum.photos/seed/hogar/800/400" };
 
   return (
     <article className="group flex flex-col overflow-hidden rounded-xl border border-border bg-white shadow-sm transition-all hover:shadow-md">
       <Link href={`/blog/${slug}`} className="block relative overflow-hidden">
         <div className="absolute inset-0 bg-black/30 z-10" />
         <img
-          src={`https://images.unsplash.com/photo-${config.unsplashId}?w=800&q=80`}
+          src={config.img}
           alt={config.label}
           className="h-40 w-full object-cover transition-transform duration-300 group-hover:scale-105"
           loading="lazy"
