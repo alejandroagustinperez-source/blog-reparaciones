@@ -1,6 +1,6 @@
-import Link from "next/link";
 import type { Metadata } from "next";
-import { getAllPosts } from "@/lib/posts";
+import { getAllPosts, getCategory } from "@/lib/posts";
+import { PostCard } from "@/components/post-card";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -15,44 +15,29 @@ export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
-    <div className="min-h-screen bg-zinc-50 font-sans">
-      <header className="border-b border-zinc-200 bg-white">
-        <div className="mx-auto max-w-3xl px-6 py-8">
-          <Link href="/" className="text-sm text-zinc-500 hover:text-zinc-800">
-            ← Inicio
-          </Link>
-          <h1 className="mt-4 text-3xl font-bold tracking-tight text-zinc-900">
+    <div className="bg-zinc-50">
+      <div className="mx-auto max-w-6xl px-6 py-12 sm:py-16">
+        <div className="mb-10 text-center sm:text-left">
+          <h1 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
             Blog de Reparaciones
           </h1>
-          <p className="mt-2 text-zinc-600">
-            Guías prácticas para reparar tu hogar en Argentina
+          <p className="mt-2 text-lg text-zinc-600">
+            Todas nuestras guías para reparar tu hogar
           </p>
         </div>
-      </header>
-      <main className="mx-auto max-w-3xl px-6 py-12">
-        <div className="space-y-8">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (
-            <article key={post.slug} className="border-b border-zinc-200 pb-8">
-              <time className="text-sm text-zinc-500">{post.date}</time>
-              <h2 className="mt-1 text-xl font-semibold text-zinc-900">
-                <Link
-                  href={`/blog/${post.slug}`}
-                  className="hover:text-zinc-600 transition-colors"
-                >
-                  {post.title}
-                </Link>
-              </h2>
-              <p className="mt-2 text-zinc-600">{post.description}</p>
-              <Link
-                href={`/blog/${post.slug}`}
-                className="mt-3 inline-block text-sm font-medium text-zinc-900 hover:text-zinc-600 transition-colors"
-              >
-                Leer más →
-              </Link>
-            </article>
+            <PostCard
+              key={post.slug}
+              slug={post.slug}
+              title={post.title}
+              description={post.description}
+              date={post.date}
+              category={getCategory(post.slug)}
+            />
           ))}
         </div>
-      </main>
+      </div>
     </div>
   );
 }

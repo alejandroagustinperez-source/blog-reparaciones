@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getAllPosts, getPostBySlug } from "@/lib/posts";
+import { getAllPosts, getPostBySlug, getCategory } from "@/lib/posts";
 import { Markdown } from "@/components/markdown";
 
 const siteUrl = "https://blog.reparacionessimplesdelhogar.com.ar";
@@ -40,6 +40,8 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
+  const category = getCategory(slug);
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -67,66 +69,68 @@ export default async function BlogPostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="min-h-screen bg-zinc-50 font-sans">
-        <header className="border-b border-zinc-200 bg-white">
-          <div className="mx-auto max-w-3xl px-6 py-8">
-            <Link
-              href="/blog"
-              className="text-sm text-zinc-500 hover:text-zinc-800"
-            >
-              ← Volver al blog
-            </Link>
+      <article className="mx-auto max-w-3xl px-6 py-12 sm:py-16">
+        <Link
+          href="/blog"
+          className="inline-flex items-center gap-1 text-sm font-medium text-zinc-500 hover:text-primary transition-colors"
+        >
+          ← Volver al blog
+        </Link>
+
+        <header className="mt-8">
+          <div className="flex items-center gap-3 text-sm">
+            <span className="rounded-full bg-muted px-3 py-1 font-medium text-zinc-600">
+              {category === "electricidad" && "⚡ Electricidad"}
+              {category === "plomeria" && "🔧 Plomería"}
+              {category === "gas" && "🔥 Gas"}
+              {category === "electrodomesticos" && "🏠 Electrodomésticos"}
+            </span>
+            <time className="text-zinc-400">{post.date}</time>
           </div>
+          <h1 className="mt-4 text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
+            {post.title}
+          </h1>
+          <p className="mt-3 text-lg leading-relaxed text-zinc-600">
+            {post.description}
+          </p>
         </header>
-        <main className="mx-auto max-w-3xl px-6 py-12">
-          <article>
-            <header>
-              <time className="text-sm text-zinc-500">{post.date}</time>
-              <h1 className="mt-2 text-3xl font-bold tracking-tight text-zinc-900">
-                {post.title}
-              </h1>
-            </header>
 
-            <div className="my-8">
-              <ins
-                className="adsbygoogle"
-                style={{ display: "block" }}
-                data-ad-client="ca-pub-3023638239005262"
-                data-ad-slot="AD_SLOT_1"
-                data-ad-format="auto"
-                data-full-width-responsive="true"
-              />
-              <script
-                dangerouslySetInnerHTML={{
-                  __html:
-                    "(adsbygoogle = window.adsbygoogle || []).push({});",
-                }}
-              />
-            </div>
+        <div className="my-10">
+          <ins
+            className="adsbygoogle"
+            style={{ display: "block" }}
+            data-ad-client="ca-pub-3023638239005262"
+            data-ad-slot="AD_SLOT_1"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: "(adsbygoogle = window.adsbygoogle || []).push({});",
+            }}
+          />
+        </div>
 
-            <div className="prose prose-zinc max-w-none">
-              <Markdown content={post.content} />
-            </div>
+        <div className="article-content">
+          <Markdown content={post.content} />
+        </div>
 
-            <div className="mt-12">
-              <ins
-                className="adsbygoogle"
-                style={{ display: "block" }}
-                data-ad-client="ca-pub-3023638239005262"
-                data-ad-slot="AD_SLOT_2"
-                data-ad-format="auto"
-                data-full-width-responsive="true"
-              />
-              <script
-                dangerouslySetInnerHTML={{
-                  __html:
-                    "(adsbygoogle = window.adsbygoogle || []).push({});",
-                }}
-              />
-            </div>
-          </article>
-        </main>
-      </div>
+        <div className="mt-16">
+          <ins
+            className="adsbygoogle"
+            style={{ display: "block" }}
+            data-ad-client="ca-pub-3023638239005262"
+            data-ad-slot="AD_SLOT_2"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: "(adsbygoogle = window.adsbygoogle || []).push({});",
+            }}
+          />
+        </div>
+      </article>
     </>
   );
 }

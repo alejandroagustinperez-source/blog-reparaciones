@@ -12,6 +12,20 @@ export type Post = {
   content: string;
 };
 
+const categoryKeywords: Record<string, string[]> = {
+  electricidad: ["enchufe", "térmica", "llave", "eléctrico", "diferencial", "electricidad"],
+  plomeria: ["canilla", "inodoro", "desagote", "flexible", "pérdidas", "agua", "plomería"],
+  gas: ["calefón", "estufa", "detector", "gas"],
+  electrodomesticos: ["heladera", "lavarropas", "microondas", "electrodomésticos"],
+};
+
+export function getCategory(slug: string): string {
+  for (const [cat, keywords] of Object.entries(categoryKeywords)) {
+    if (keywords.some((kw) => slug.includes(kw))) return cat;
+  }
+  return "general";
+}
+
 export function getAllPosts(): Post[] {
   const fileNames = fs.readdirSync(postsDirectory);
   const posts = fileNames

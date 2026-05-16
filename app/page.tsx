@@ -2,22 +2,28 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-center py-32 px-6 text-center">
+    <div className="flex flex-1 items-center justify-center bg-gradient-to-b from-white to-zinc-50">
+      <div className="mx-auto max-w-3xl px-6 py-24 text-center sm:py-32">
+        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary shadow-lg shadow-primary/20">
+          <span className="text-3xl">🛠️</span>
+        </div>
         <h1 className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl">
           Reparaciones Simples del Hogar
         </h1>
-        <p className="mt-4 text-lg leading-8 text-zinc-600 max-w-lg">
+        <p className="mx-auto mt-4 max-w-xl text-lg leading-8 text-zinc-600">
           Guías prácticas y tutoriales para reparar tu casa en Argentina.
-          Electricidad, plomería, gas y electrodomésticos.
+          Electricidad, plomería, gas y electrodomésticos explicados paso a paso.
         </p>
-        <Link
-          href="/blog"
-          className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-zinc-900 px-8 text-base font-medium text-white transition-colors hover:bg-zinc-700"
-        >
-          Ver artículos
-        </Link>
-      </main>
+        <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <Link
+            href="/blog"
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-primary px-8 text-base font-medium text-white shadow-sm transition-all hover:bg-primary-dark"
+          >
+            Ver artículos
+            <span>→</span>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
