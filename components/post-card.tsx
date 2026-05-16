@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 type PostCardProps = {
   slug: string;
@@ -20,13 +21,14 @@ export function PostCard({ slug, title, description, date, category }: PostCardP
 
   return (
     <article className="group flex flex-col overflow-hidden rounded-xl border border-border bg-white shadow-sm transition-all hover:shadow-md">
-      <Link href={`/blog/${slug}`} className="block relative overflow-hidden">
+      <Link href={`/blog/${slug}`} className="relative block h-40 overflow-hidden">
         <div className="absolute inset-0 bg-black/30 z-10" />
-        <img
+        <Image
           src={config.img}
           alt={config.label}
-          className="h-40 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-          loading="lazy"
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
         <div className="absolute inset-0 z-20 flex items-center justify-center">
           <span className="text-5xl drop-shadow-lg">{config.icon}</span>
