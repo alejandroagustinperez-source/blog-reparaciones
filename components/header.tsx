@@ -11,9 +11,9 @@ export function Header() {
           Reparaciones Simples
         </Link>
         <nav className="flex items-center gap-6 text-sm font-medium text-zinc-600">
-          <Link href="/" className="hover:text-primary transition-colors">
+          <a href="https://www.reparacionessimplesdelhogar.com.ar" className="hover:text-primary transition-colors">
             Inicio
-          </Link>
+          </a>
           <Link href="/blog" className="hover:text-primary transition-colors">
             Blog
           </Link>
