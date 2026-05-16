@@ -8,21 +8,28 @@ type PostCardProps = {
   category: string;
 };
 
-const categoryConfig: Record<string, { label: string; icon: string; bg: string }> = {
-  electricidad: { label: "Electricidad", icon: "⚡", bg: "from-blue-600 to-blue-700" },
-  plomeria: { label: "Plomería", icon: "🔧", bg: "from-cyan-600 to-cyan-700" },
-  gas: { label: "Gas", icon: "🔥", bg: "from-orange-600 to-orange-700" },
-  electrodomesticos: { label: "Electrodomésticos", icon: "🏠", bg: "from-purple-600 to-purple-700" },
+const categoryConfig: Record<string, { label: string; icon: string; unsplashId: string }> = {
+  electricidad: { label: "Electricidad", icon: "⚡", unsplashId: "IzFr8kB7Svc" },
+  plomeria: { label: "Plomería", icon: "🔧", unsplashId: "rdAKQYI3Hnk" },
+  gas: { label: "Gas", icon: "🔥", unsplashId: "bgb56tnWSYI" },
+  electrodomesticos: { label: "Electrodomésticos", icon: "🏠", unsplashId: "5SnHjsXHGLQ" },
 };
 
 export function PostCard({ slug, title, description, date, category }: PostCardProps) {
-  const config = categoryConfig[category] ?? { label: "General", icon: "📝", bg: "from-zinc-500 to-zinc-600" };
+  const config = categoryConfig[category] ?? { label: "General", icon: "📝", unsplashId: "" };
 
   return (
     <article className="group flex flex-col overflow-hidden rounded-xl border border-border bg-white shadow-sm transition-all hover:shadow-md">
-      <Link href={`/blog/${slug}`} className="block">
-        <div className={`flex h-40 items-center justify-center bg-gradient-to-br ${config.bg}`}>
-          <span className="text-5xl">{config.icon}</span>
+      <Link href={`/blog/${slug}`} className="block relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/30 z-10" />
+        <img
+          src={`https://images.unsplash.com/photo-${config.unsplashId}?w=800&q=80`}
+          alt={config.label}
+          className="h-40 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 z-20 flex items-center justify-center">
+          <span className="text-5xl drop-shadow-lg">{config.icon}</span>
         </div>
       </Link>
       <div className="flex flex-1 flex-col p-5">
