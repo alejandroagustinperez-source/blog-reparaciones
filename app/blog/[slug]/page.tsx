@@ -84,7 +84,7 @@ export default async function BlogPostPage({ params }: Props) {
       />
       <ReadingProgress />
 
-      <div className="mx-auto max-w-6xl px-6 py-8 sm:py-12">
+      <div className="mx-auto max-w-6xl px-6 py-4 sm:py-8">
         <Link
           href="/blog"
           className="inline-flex items-center gap-1 text-sm font-medium text-zinc-500 hover:text-blue-600 transition-colors"
@@ -92,7 +92,7 @@ export default async function BlogPostPage({ params }: Props) {
           ← Volver al blog
         </Link>
 
-        <div className="mt-6 lg:grid lg:grid-cols-[1fr_220px] lg:gap-12">
+        <div className="mt-4 lg:grid lg:grid-cols-[1fr_220px] lg:gap-12">
           <article className="min-w-0">
             <header>
               <div className="flex flex-wrap items-center gap-3 text-sm">
@@ -103,15 +103,15 @@ export default async function BlogPostPage({ params }: Props) {
                 <span className="text-zinc-300">·</span>
                 <span className="text-zinc-400">{post.readingTime}</span>
               </div>
-              <h1 className="mt-4 text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
+              <h1 className="mt-3 text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
                 {post.title}
               </h1>
-              <p className="mt-3 text-lg leading-relaxed text-zinc-600">
+              <p className="mt-2 text-lg leading-relaxed text-zinc-600">
                 {post.description}
               </p>
             </header>
 
-            <div className="my-10">
+            <div className="my-6">
               <ins
                 className="adsbygoogle"
                 style={{ display: "block" }}
@@ -131,11 +131,11 @@ export default async function BlogPostPage({ params }: Props) {
               <Markdown content={post.content} />
             </div>
 
-            <div className="mx-auto mt-12 max-w-[700px]">
+            <div className="mx-auto mt-8 max-w-[700px]">
               <HelpfulButtons />
             </div>
 
-            <div className="mx-auto mt-12 max-w-[700px]">
+            <div className="mx-auto mt-8 max-w-[700px]">
               <ins
                 className="adsbygoogle"
                 style={{ display: "block" }}
