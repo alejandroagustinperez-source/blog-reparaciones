@@ -6,6 +6,7 @@ import { Markdown } from "@/components/markdown";
 import { ReadingProgress } from "@/components/reading-progress";
 import { TableOfContents } from "@/components/table-of-contents";
 import { HelpfulButtons } from "@/components/helpful-buttons";
+import { RelatedPosts } from "@/components/related-posts";
 
 const siteUrl = "https://blog.reparacionessimplesdelhogar.com.ar";
 
@@ -157,6 +158,8 @@ export default async function BlogPostPage({ params }: Props) {
             </aside>
           )}
         </div>
+
+        <RelatedPosts currentSlug={post.slug} currentCategory={post.category} />
       </div>
     </>
   );
