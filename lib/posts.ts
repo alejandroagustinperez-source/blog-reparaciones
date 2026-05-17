@@ -10,6 +10,7 @@ export type Post = {
   description: string;
   date: string;
   content: string;
+  category: string;
 };
 
 const categoryKeywords: Record<string, string[]> = {
@@ -41,6 +42,7 @@ export function getAllPosts(): Post[] {
         description: data.description,
         date: data.date,
         content,
+        category: data.category ?? getCategory(slug),
       };
     })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -58,6 +60,7 @@ export function getPostBySlug(slug: string): Post | null {
       description: data.description,
       date: data.date,
       content,
+      category: data.category ?? getCategory(slug),
     };
   } catch {
     return null;
