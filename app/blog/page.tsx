@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getAllPosts, getCategory } from "@/lib/posts";
+import { getAllPosts } from "@/lib/posts";
 import { PostCard } from "@/components/post-card";
 
 export const metadata: Metadata = {
@@ -33,7 +33,8 @@ export default function BlogPage() {
               title={post.title}
               description={post.description}
               date={post.date}
-              category={getCategory(post.slug)}
+              category={post.category}
+              readingTime={post.readingTime}
             />
           ))}
         </div>

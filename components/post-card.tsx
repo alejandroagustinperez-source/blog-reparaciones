@@ -6,40 +6,48 @@ type PostCardProps = {
   description: string;
   date: string;
   category: string;
+  readingTime: string;
 };
 
-const categoryConfig: Record<string, { label: string; icon: string; bg: string }> = {
-  electricidad: { label: "Electricidad", icon: "🔌", bg: "bg-blue-50" },
-  plomeria: { label: "Plomería", icon: "🚿", bg: "bg-emerald-50" },
-  gas: { label: "Gas", icon: "🔥", bg: "bg-orange-50" },
-  electrodomesticos: { label: "Electrodomésticos", icon: "🏠", bg: "bg-zinc-100" },
+const borderColors: Record<string, string> = {
+  electricidad: "border-l-blue-500",
+  plomeria: "border-l-emerald-500",
+  gas: "border-l-orange-500",
+  electrodomesticos: "border-l-slate-400",
 };
 
-export function PostCard({ slug, title, description, date, category }: PostCardProps) {
-  const config = categoryConfig[category] ?? { label: "General", icon: "📝", bg: "bg-zinc-100" };
+const linkColors: Record<string, string> = {
+  electricidad: "text-blue-600 hover:text-blue-700",
+  plomeria: "text-emerald-600 hover:text-emerald-700",
+  gas: "text-orange-600 hover:text-orange-700",
+  electrodomesticos: "text-slate-500 hover:text-slate-700",
+};
+
+export function PostCard({ slug, title, description, date, category, readingTime }: PostCardProps) {
+  const border = borderColors[category] ?? "border-l-amber-400";
+  const linkColor = linkColors[category] ?? "text-amber-600 hover:text-amber-700";
 
   return (
-    <article className="group flex flex-col overflow-hidden rounded-xl border border-border bg-white shadow-sm transition-all hover:shadow-md">
-      <div className={`flex items-center gap-3 ${config.bg} px-5 pt-5 pb-3`}>
-        <span className="text-2xl">{config.icon}</span>
-        <span className="text-sm font-medium text-zinc-600">{config.label}</span>
-      </div>
-      <div className="flex flex-1 flex-col px-5 pb-5">
+    <article
+      className={`flex flex-col rounded-lg border border-zinc-200 border-l-4 bg-white shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md ${border}`}
+    >
+      <div className="flex flex-1 flex-col p-5">
         <time className="text-xs text-zinc-400">{date}</time>
-        <h2 className="mt-2 text-lg font-semibold leading-snug text-zinc-900 group-hover:text-primary transition-colors">
-          <Link href={`/blog/${slug}`}>
+        <h2 className="mt-1.5 text-lg font-bold leading-snug text-zinc-900">
+          <Link href={`/blog/${slug}`} className="hover:underline decoration-from-font">
             {title}
           </Link>
         </h2>
-        <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-zinc-600">
+        <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-zinc-600">
           {description}
         </p>
-        <div className="mt-auto pt-4">
+        <div className="mt-auto flex items-center justify-between pt-4">
+          <span className="text-xs text-zinc-400">{readingTime}</span>
           <Link
             href={`/blog/${slug}`}
-            className="inline-flex items-center gap-1 text-sm font-medium text-accent hover:text-accent-dark transition-colors"
+            className={`inline-flex items-center gap-1 text-sm font-medium transition-colors ${linkColor}`}
           >
-            Leer más
+            Leer artículo
             <span className="text-base leading-none">→</span>
           </Link>
         </div>

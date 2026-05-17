@@ -11,7 +11,14 @@ export type Post = {
   date: string;
   content: string;
   category: string;
+  readingTime: string;
 };
+
+export function getReadingTime(content: string): string {
+  const words = content.split(/\s+/).length;
+  const minutes = Math.max(1, Math.round(words / 200));
+  return `${minutes} min de lectura`;
+}
 
 const categoryKeywords: Record<string, string[]> = {
   electricidad: ["enchufe", "térmica", "llave", "eléctrico", "diferencial", "electricidad"],
@@ -43,6 +50,7 @@ export function getAllPosts(): Post[] {
         date: data.date,
         content,
         category: data.category ?? getCategory(slug),
+        readingTime: getReadingTime(content),
       };
     })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -61,6 +69,7 @@ export function getPostBySlug(slug: string): Post | null {
       date: data.date,
       content,
       category: data.category ?? getCategory(slug),
+      readingTime: getReadingTime(content),
     };
   } catch {
     return null;
