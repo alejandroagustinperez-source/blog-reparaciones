@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getAllPosts } from "@/lib/posts";
-import { PostCard } from "@/components/post-card";
+import { BlogFilter } from "@/components/blog-filter";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -25,19 +25,7 @@ export default function BlogPage() {
             Todas nuestras guías para reparar tu hogar
           </p>
         </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {posts.map((post) => (
-            <PostCard
-              key={post.slug}
-              slug={post.slug}
-              title={post.title}
-              description={post.description}
-              date={post.date}
-              category={post.category}
-              readingTime={post.readingTime}
-            />
-          ))}
-        </div>
+        <BlogFilter posts={posts} />
       </div>
     </div>
   );
