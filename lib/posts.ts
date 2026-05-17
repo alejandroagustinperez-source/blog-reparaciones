@@ -14,6 +14,32 @@ export type Post = {
   readingTime: string;
 };
 
+export function slugifyHeading(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[áäâà]/g, "a")
+    .replace(/[éëêè]/g, "e")
+    .replace(/[íïîì]/g, "i")
+    .replace(/[óöôò]/g, "o")
+    .replace(/[úüûù]/g, "u")
+    .replace(/ñ/g, "n")
+    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+export function getHeadings(content: string): { text: string; id: string }[] {
+  const regex = /^##\s+(.+)$/gm;
+  const headings: { text: string; id: string }[] = [];
+  let match;
+  while ((match = regex.exec(content)) !== null) {
+    const text = match[1].trim();
+    headings.push({ text, id: slugifyHeading(text) });
+  }
+  return headings;
+}
+
 export function getReadingTime(content: string): string {
   const words = content.split(/\s+/).length;
   const minutes = Math.max(1, Math.round(words / 200));
