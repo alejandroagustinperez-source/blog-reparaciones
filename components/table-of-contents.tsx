@@ -41,7 +41,7 @@ export function TableOfContents({ headings }: { headings: TOCItem[] }) {
               href={`#${id}`}
               className={`block text-sm leading-snug transition-colors ${
                 activeId === id
-                  ? "font-medium text-blue-600"
+                  ? "font-medium text-[#1a3a6b]"
                   : "text-zinc-500 hover:text-zinc-800"
               }`}
             >

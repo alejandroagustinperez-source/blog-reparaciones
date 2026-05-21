@@ -13,9 +13,9 @@ const categories = [
 ];
 
 const catButton: Record<string, string> = {
-  electricidad: "data-[active=true]:bg-blue-100 data-[active=true]:text-blue-700 data-[active=true]:border-blue-200",
+  electricidad: "data-[active=true]:bg-[#1a3a6b]/10 data-[active=true]:text-[#1a3a6b] data-[active=true]:border-[#1a3a6b]/30",
   plomeria: "data-[active=true]:bg-emerald-100 data-[active=true]:text-emerald-700 data-[active=true]:border-emerald-200",
-  gas: "data-[active=true]:bg-orange-100 data-[active=true]:text-orange-700 data-[active=true]:border-orange-200",
+  gas: "data-[active=true]:bg-[#f07020]/10 data-[active=true]:text-[#f07020] data-[active=true]:border-[#f07020]/30",
   electrodomesticos: "data-[active=true]:bg-zinc-200 data-[active=true]:text-zinc-700 data-[active=true]:border-zinc-300",
 };
 
@@ -46,7 +46,7 @@ export function BlogFilter({ posts }: { posts: Post[] }) {
             placeholder="Buscar artículos..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="w-full rounded-lg border border-zinc-200 bg-white py-3.5 pl-12 pr-4 text-base text-zinc-900 placeholder:text-zinc-400 shadow-sm transition-all focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-100"
+            className="w-full rounded-xl border border-zinc-200 bg-white py-3.5 pl-12 pr-4 text-base text-zinc-900 placeholder:text-zinc-400 shadow-sm transition-all focus:border-[#f07020] focus:outline-none focus:ring-2 focus:ring-[#f07020]/10"
           />
         </div>
 
@@ -56,9 +56,9 @@ export function BlogFilter({ posts }: { posts: Post[] }) {
               key={key}
               data-active={category === key}
               onClick={() => setCategory(key)}
-              className={`rounded-full border border-zinc-200 px-4 py-1.5 text-sm font-medium text-zinc-600 transition-all hover:border-zinc-300 hover:bg-zinc-100 ${
+              className={`rounded-xl border border-zinc-200 px-4 py-1.5 text-sm font-medium text-zinc-600 transition-all hover:border-zinc-300 hover:bg-zinc-100 ${
                 key === "" && category === ""
-                  ? "bg-zinc-900 text-white border-zinc-900"
+                  ? "bg-[#1a3a6b] text-white border-[#1a3a6b]"
                   : ""
               } ${catButton[key] ?? ""}`}
             >
@@ -83,7 +83,7 @@ export function BlogFilter({ posts }: { posts: Post[] }) {
           ))}
         </div>
       ) : (
-        <div className="rounded-lg border border-zinc-200 bg-white py-16 text-center">
+        <div className="rounded-xl border border-zinc-200 bg-white py-16 text-center">
           <span className="text-4xl">🔍</span>
           <p className="mt-4 text-lg font-medium text-zinc-900">
             No encontramos artículos para tu búsqueda

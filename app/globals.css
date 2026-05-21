@@ -3,14 +3,13 @@
 @theme inline {
   --color-background: #ffffff;
   --color-foreground: #0a0a0a;
-  --color-primary: #2563eb;
-  --color-primary-dark: #1d4ed8;
-  --color-accent: #ea580c;
-  --color-accent-dark: #c2410c;
+  --color-primary: #1a3a6b;
+  --color-primary-dark: #122a52;
+  --color-accent: #f07020;
+  --color-accent-dark: #d45e10;
   --color-muted: #f4f4f5;
   --color-border: #e4e4e7;
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans), system-ui, sans-serif;
 }
 
 body {
@@ -43,7 +42,7 @@ body {
     margin-bottom: 0.5rem;
     color: #18181b;
     padding-left: 0.75rem;
-    border-left: 4px solid #2563eb;
+    border-left: 4px solid #1a3a6b;
   }
 
   h3 {
@@ -81,17 +80,17 @@ body {
   }
 
   a {
-    color: #2563eb;
+    color: #1a3a6b;
     text-decoration: underline;
     text-underline-offset: 2px;
   }
 
   a:hover {
-    color: #1d4ed8;
+    color: #f07020;
   }
 
   code {
-    font-family: var(--font-mono), monospace;
+    font-family: monospace;
     font-size: 0.875em;
     background: #f4f4f5;
     padding: 0.125rem 0.375rem;
@@ -153,4 +152,8 @@ body {
     background: #f4f4f5;
     font-weight: 600;
   }
+}
+
+@utility btn-primary {
+  @apply inline-flex items-center justify-center rounded-xl bg-accent px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-accent-dark;
 }

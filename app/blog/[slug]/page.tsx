@@ -15,9 +15,9 @@ type Props = {
 };
 
 const categoryColors: Record<string, { label: string; bg: string; text: string }> = {
-  electricidad: { label: "Electricidad", bg: "bg-blue-100", text: "text-blue-700" },
+  electricidad: { label: "Electricidad", bg: "bg-[#1a3a6b]/10", text: "text-[#1a3a6b]" },
   plomeria: { label: "Plomería", bg: "bg-emerald-100", text: "text-emerald-700" },
-  gas: { label: "Gas", bg: "bg-orange-100", text: "text-orange-700" },
+  gas: { label: "Gas", bg: "bg-[#f07020]/10", text: "text-[#f07020]" },
   electrodomesticos: { label: "Electrodomésticos", bg: "bg-zinc-200", text: "text-zinc-700" },
   general: { label: "Mantenimiento", bg: "bg-amber-100", text: "text-amber-700" },
 };
@@ -87,7 +87,7 @@ export default async function BlogPostPage({ params }: Props) {
       <div className="mx-auto max-w-6xl px-6 py-4 sm:py-8">
         <Link
           href="/blog"
-          className="inline-flex items-center gap-1 text-sm font-medium text-zinc-500 hover:text-blue-600 transition-colors"
+          className="inline-flex items-center gap-1 text-sm font-medium text-zinc-500 hover:text-[#f07020] transition-colors"
         >
           ← Volver al blog
         </Link>
