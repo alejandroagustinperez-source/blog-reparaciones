@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import "./globals.css";
 
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
 const plusJakarta = Plus_Jakarta_Sans({
-  variable: "--font-sans",
+  variable: "--font-plus-jakarta",
   subsets: ["latin"],
 });
 
@@ -21,9 +26,7 @@ export const metadata: Metadata = {
   },
   description,
   metadataBase: new URL("https://blog.reparacionessimplesdelhogar.com.ar"),
-  alternates: {
-    canonical: "/",
-  },
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     siteName,
@@ -40,7 +43,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${plusJakarta.variable} h-full antialiased`}
+      className={`${inter.variable} ${plusJakarta.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-white">
         <Header />

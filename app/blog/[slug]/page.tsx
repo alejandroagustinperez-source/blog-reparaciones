@@ -14,12 +14,20 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-const categoryColors: Record<string, { label: string; bg: string; text: string }> = {
-  electricidad: { label: "Electricidad", bg: "bg-[#1a3a6b]/10", text: "text-[#1a3a6b]" },
-  plomeria: { label: "Plomería", bg: "bg-emerald-100", text: "text-emerald-700" },
-  gas: { label: "Gas", bg: "bg-[#f07020]/10", text: "text-[#f07020]" },
-  electrodomesticos: { label: "Electrodomésticos", bg: "bg-zinc-200", text: "text-zinc-700" },
-  general: { label: "Mantenimiento", bg: "bg-amber-100", text: "text-amber-700" },
+const catImg: Record<string, string> = {
+  electricidad: "https://picsum.photos/seed/electricidad/1200/600",
+  plomeria: "https://picsum.photos/seed/plomeria/1200/600",
+  gas: "https://picsum.photos/seed/gas/1200/600",
+  electrodomesticos: "https://picsum.photos/seed/electrodomesticos/1200/600",
+  humedad: "https://picsum.photos/seed/humedad/1200/600",
+};
+
+const catLabel: Record<string, string> = {
+  electricidad: "GUÍA DE ELECTRICIDAD",
+  plomeria: "GUÍA DE PLOMERÍA",
+  gas: "GUÍA DE GAS",
+  electrodomesticos: "GUÍA DE ELECTRODOMÉSTICOS",
+  humedad: "GUÍA DE HUMEDAD",
 };
 
 export async function generateStaticParams() {
@@ -52,8 +60,9 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
-  const cat = categoryColors[post.category] ?? categoryColors.general;
   const headings = getHeadings(post.content);
+  const imgUrl = catImg[post.category] ?? "https://picsum.photos/seed/hogar/1200/600";
+  const label = catLabel[post.category] ?? "GUÍA PRÁCTICA";
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -84,29 +93,39 @@ export default async function BlogPostPage({ params }: Props) {
       />
       <ReadingProgress />
 
-      <div className="mx-auto max-w-6xl px-6 py-4 sm:py-8">
-        <Link
-          href="/blog"
-          className="inline-flex items-center gap-1 text-sm font-medium text-zinc-500 hover:text-[#f07020] transition-colors"
-        >
-          ← Volver al blog
-        </Link>
+      <div className="relative h-56 sm:h-72 lg:h-80 overflow-hidden">
+        <img
+          src={imgUrl}
+          alt={post.title}
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        <div className="absolute bottom-6 left-1/2 w-full max-w-6xl -translate-x-1/2 px-6">
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-1 text-sm font-medium text-white/80 hover:text-white transition-colors"
+          >
+            ← Volver al blog
+          </Link>
+        </div>
+      </div>
 
-        <div className="mt-4 lg:grid lg:grid-cols-[1fr_220px] lg:gap-12">
+      <div className="mx-auto max-w-6xl px-6 py-8">
+        <div className="lg:grid lg:grid-cols-[1fr_220px] lg:gap-12">
           <article className="min-w-0">
             <header>
               <div className="flex flex-wrap items-center gap-3 text-sm">
-                <span className={`rounded-full px-3 py-1 font-medium ${cat.bg} ${cat.text}`}>
-                  {cat.label}
+                <span className="rounded-full bg-[#f97316] px-3 py-1 text-xs font-semibold text-white">
+                  {label}
                 </span>
-                <time className="text-zinc-400">{post.date}</time>
-                <span className="text-zinc-300">·</span>
-                <span className="text-zinc-400">{post.readingTime}</span>
+                <time className="text-gray-400">{post.date}</time>
+                <span className="text-gray-300">·</span>
+                <span className="text-gray-400">{post.readingTime}</span>
               </div>
-              <h1 className="mt-3 text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
+              <h1 className="mt-3 text-3xl font-bold tracking-tight text-[#1e3a5f] sm:text-4xl">
                 {post.title}
               </h1>
-              <p className="mt-2 text-lg leading-relaxed text-zinc-600">
+              <p className="mt-2 text-lg leading-relaxed text-gray-600">
                 {post.description}
               </p>
             </header>

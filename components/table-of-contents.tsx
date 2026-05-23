@@ -31,18 +31,18 @@ export function TableOfContents({ headings }: { headings: TOCItem[] }) {
 
   return (
     <nav className="sticky top-24">
-      <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-zinc-400">
+      <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
         En este artículo
       </h3>
-      <ul className="space-y-2">
+      <ul className="space-y-2 border-l-2 border-gray-200 pl-3">
         {headings.map(({ text, id }) => (
           <li key={id}>
             <a
               href={`#${id}`}
               className={`block text-sm leading-snug transition-colors ${
                 activeId === id
-                  ? "font-medium text-[#1a3a6b]"
-                  : "text-zinc-500 hover:text-zinc-800"
+                  ? "font-medium text-[#f97316]"
+                  : "text-gray-500 hover:text-gray-800"
               }`}
             >
               {text}

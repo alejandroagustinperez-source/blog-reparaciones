@@ -51,6 +51,7 @@ const categoryKeywords: Record<string, string[]> = {
   plomeria: ["canilla", "inodoro", "desagote", "flexible", "pérdidas", "agua", "plomería"],
   gas: ["calefón", "estufa", "detector", "gas"],
   electrodomesticos: ["heladera", "lavarropas", "microondas", "electrodomésticos"],
+  humedad: ["humedad", "moho", "filtración"],
 };
 
 export function getCategory(slug: string): string {
