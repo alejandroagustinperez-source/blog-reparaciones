@@ -12,6 +12,7 @@ export type Post = {
   content: string;
   category: string;
   readingTime: string;
+  image?: string;
 };
 
 export function slugifyHeading(text: string): string {
@@ -78,6 +79,7 @@ export function getAllPosts(): Post[] {
         content,
         category: data.category ?? getCategory(slug),
         readingTime: getReadingTime(content),
+        image: data.image || undefined,
       };
     })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -97,6 +99,7 @@ export function getPostBySlug(slug: string): Post | null {
       content,
       category: data.category ?? getCategory(slug),
       readingTime: getReadingTime(content),
+      image: data.image || undefined,
     };
   } catch {
     return null;

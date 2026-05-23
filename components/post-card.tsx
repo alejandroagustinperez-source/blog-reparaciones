@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CategoryIcon, CategoryBadge, getCategoryLabel } from "@/components/category-icon";
 
 type PostCardProps = {
   slug: string;
@@ -7,37 +8,25 @@ type PostCardProps = {
   date: string;
   category: string;
   readingTime: string;
+  image?: string;
 };
 
-const catImg: Record<string, string> = {
-  electricidad: "https://picsum.photos/seed/electricidad/800/400",
-  plomeria: "https://picsum.photos/seed/plomeria/800/400",
-  gas: "https://picsum.photos/seed/gas/800/400",
-  electrodomesticos: "https://picsum.photos/seed/electrodomesticos/800/400",
-};
-
-const catLabel: Record<string, string> = {
-  electricidad: "Electricidad",
-  plomeria: "Plomería",
-  gas: "Gas",
-  electrodomesticos: "Electrodomésticos",
-};
-
-export function PostCard({ slug, title, description, date, category, readingTime }: PostCardProps) {
-  const imgUrl = catImg[category] ?? "https://picsum.photos/seed/hogar/800/400";
-  const label = catLabel[category] ?? "General";
-
+export function PostCard({ slug, title, description, date, category, readingTime, image }: PostCardProps) {
   return (
     <article className="group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition-all hover:-translate-y-0.5 hover:shadow-md">
       <Link href={`/blog/${slug}`} className="relative block h-48 overflow-hidden">
-        <img
-          src={imgUrl}
-          alt={label}
-          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-          loading="lazy"
-        />
-        <span className="absolute top-3 left-3 rounded-full bg-[#f97316] px-3 py-1 text-xs font-semibold text-white shadow-sm">
-          {label}
+        {image ? (
+          <img
+            src={image}
+            alt={getCategoryLabel(category)}
+            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            loading="lazy"
+          />
+        ) : (
+          <CategoryIcon category={category} className="h-full w-full" />
+        )}
+        <span className="absolute top-3 left-3">
+          <CategoryBadge category={category} />
         </span>
       </Link>
       <div className="flex flex-1 flex-col p-5">

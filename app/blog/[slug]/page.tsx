@@ -7,6 +7,7 @@ import { ReadingProgress } from "@/components/reading-progress";
 import { TableOfContents } from "@/components/table-of-contents";
 import { HelpfulButtons } from "@/components/helpful-buttons";
 import { RelatedPosts } from "@/components/related-posts";
+import { CategoryIcon } from "@/components/category-icon";
 
 const siteUrl = "https://blog.reparacionessimplesdelhogar.com.ar";
 
@@ -14,15 +15,7 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-const catImg: Record<string, string> = {
-  electricidad: "https://picsum.photos/seed/electricidad/1200/600",
-  plomeria: "https://picsum.photos/seed/plomeria/1200/600",
-  gas: "https://picsum.photos/seed/gas/1200/600",
-  electrodomesticos: "https://picsum.photos/seed/electrodomesticos/1200/600",
-  humedad: "https://picsum.photos/seed/humedad/1200/600",
-};
-
-const catLabel: Record<string, string> = {
+const catLabelBanner: Record<string, string> = {
   electricidad: "GUÍA DE ELECTRICIDAD",
   plomeria: "GUÍA DE PLOMERÍA",
   gas: "GUÍA DE GAS",
@@ -61,8 +54,7 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   const headings = getHeadings(post.content);
-  const imgUrl = catImg[post.category] ?? "https://picsum.photos/seed/hogar/1200/600";
-  const label = catLabel[post.category] ?? "GUÍA PRÁCTICA";
+  const label = catLabelBanner[post.category] ?? "GUÍA PRÁCTICA";
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -94,12 +86,16 @@ export default async function BlogPostPage({ params }: Props) {
       <ReadingProgress />
 
       <div className="relative h-56 sm:h-72 lg:h-80 overflow-hidden">
-        <img
-          src={imgUrl}
-          alt={post.title}
-          className="h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        {post.image ? (
+          <img
+            src={post.image}
+            alt={post.title}
+            className="h-full w-full object-cover"
+          />
+        ) : (
+          <CategoryIcon category={post.category} className="h-full w-full" />
+        )}
+        {post.image && <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />}
         <div className="absolute bottom-6 left-1/2 w-full max-w-6xl -translate-x-1/2 px-6">
           <Link
             href="/blog"
