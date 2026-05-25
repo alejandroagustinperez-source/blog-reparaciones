@@ -22,11 +22,11 @@ export function Footer() {
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-400">Secciones</h4>
             <ul className="mt-4 space-y-2">
-              <li><a href="https://www.reparacionessimplesdelhogar.com.ar" className="text-sm text-gray-400 hover:text-white transition-colors">Inicio</a></li>
+              <li><a href="https://reparacionessimplesdelhogar.com.ar" className="text-sm text-gray-400 hover:text-white transition-colors">Inicio</a></li>
               <li><Link href="/blog" className="text-sm text-gray-400 hover:text-white transition-colors">Blog</Link></li>
-              <li><a href="https://www.reparacionessimplesdelhogar.com.ar/herramientas" className="text-sm text-gray-400 hover:text-white transition-colors">Herramientas</a></li>
-              <li><a href="https://www.reparacionessimplesdelhogar.com.ar/ebook" className="text-sm text-gray-400 hover:text-white transition-colors">Ebook</a></li>
-              <li><a href="https://www.reparacionessimplesdelhogar.com.ar/contacto" className="text-sm text-gray-400 hover:text-white transition-colors">Contacto</a></li>
+              <li><a href="https://reparacionessimplesdelhogar.com.ar/herramientas" className="text-sm text-gray-400 hover:text-white transition-colors">Herramientas</a></li>
+              <li><a href="https://reparacionessimplesdelhogar.com.ar/ebook" className="text-sm text-gray-400 hover:text-white transition-colors">Ebook</a></li>
+              <li><a href="https://reparacionessimplesdelhogar.com.ar/contacto" className="text-sm text-gray-400 hover:text-white transition-colors">Contacto</a></li>
             </ul>
           </div>
 
@@ -52,7 +52,7 @@ export function Footer() {
             </div>
             <div className="mt-6">
               <a
-                href="https://www.reparacionessimplesdelhogar.com.ar/asistente-ia"
+                href="https://reparacionessimplesdelhogar.com.ar/asistente-ia"
                 className="inline-flex items-center gap-2 rounded-lg bg-[#f97316] px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-[#ea580c]"
               >
                 Probar asistente IA
