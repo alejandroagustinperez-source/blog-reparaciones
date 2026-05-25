@@ -45,7 +45,7 @@ export function Header() {
         {/* Right side */}
         <div className="flex items-center gap-2">
           <a
-            href="https://reparacionessimplesdelhogar.com.ar/asistente-ia"
+            href="https://reparacionessimplesdelhogar.com.ar"
             className="hidden sm:inline-flex rounded-lg bg-[#f97316] px-3 py-2 text-xs sm:text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#ea580c]"
           >
             ✨ Asistente IA
@@ -73,7 +73,7 @@ export function Header() {
             )
           )}
           <a
-            href="https://reparacionessimplesdelhogar.com.ar/asistente-ia"
+            href="https://reparacionessimplesdelhogar.com.ar"
             className="mt-2 rounded-lg bg-[#f97316] px-4 py-3 text-sm font-semibold text-white text-center hover:bg-[#ea580c]"
             onClick={() => setMenuOpen(false)}
           >
