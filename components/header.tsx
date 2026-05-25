@@ -75,6 +75,7 @@ export function Header() {
           <a
             href="https://reparacionessimplesdelhogar.com.ar/asistente-ia"
             className="mt-2 rounded-lg bg-[#f97316] px-4 py-3 text-sm font-semibold text-white text-center hover:bg-[#ea580c]"
+            onClick={() => setMenuOpen(false)}
           >
             ✨ Probar asistente IA
           </a>
