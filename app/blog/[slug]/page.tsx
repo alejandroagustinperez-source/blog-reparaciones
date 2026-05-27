@@ -7,7 +7,6 @@ import { ReadingProgress } from "@/components/reading-progress";
 import { TableOfContents } from "@/components/table-of-contents";
 import { HelpfulButtons } from "@/components/helpful-buttons";
 import { RelatedPosts } from "@/components/related-posts";
-import { CategoryIcon } from "@/components/category-icon";
 
 const siteUrl = "https://blog.reparacionessimplesdelhogar.com.ar";
 
@@ -85,26 +84,24 @@ export default async function BlogPostPage({ params }: Props) {
       />
       <ReadingProgress />
 
-      <div className="relative h-56 sm:h-72 lg:h-80 overflow-hidden">
-        {post.image ? (
+      {post.image && (
+        <div className="relative h-56 sm:h-72 lg:h-80 overflow-hidden">
           <img
             src={post.image}
             alt={post.title}
             className="h-full w-full object-cover"
           />
-        ) : (
-          <CategoryIcon category={post.category} className="h-full w-full" />
-        )}
-        {post.image && <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />}
-        <div className="absolute bottom-6 left-1/2 w-full max-w-6xl -translate-x-1/2 px-6">
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-1 text-sm font-medium text-white/80 hover:text-white transition-colors"
-          >
-            ← Volver al blog
-          </Link>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+          <div className="absolute bottom-6 left-1/2 w-full max-w-6xl -translate-x-1/2 px-6">
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-1 text-sm font-medium text-white/80 hover:text-white transition-colors"
+            >
+              ← Volver al blog
+            </Link>
+          </div>
         </div>
-      </div>
+      )}
 
       <div className="mx-auto max-w-6xl px-6 py-8">
         <div className="lg:grid lg:grid-cols-[1fr_220px] lg:gap-12">
