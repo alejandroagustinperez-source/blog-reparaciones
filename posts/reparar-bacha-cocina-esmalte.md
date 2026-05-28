@@ -3,7 +3,7 @@ title: "Cómo reparar una bacha de cocina que perdió el esmalte"
 description: "Guía paso a paso para argentinos: repará el esmalte saltado de la bacha de la cocina sin llamar al plomero. Desde rayones hasta partes peladas, todo explicado para que quede como nueva."
 date: "2026-06-15"
 category: "electrodomesticos"
-image: ""
+image: "/images/reparar-bacha-cocina-esmalte.jpg"
 ---
 
 ## Esa mancha fea que no se va del fondo de la bacha
