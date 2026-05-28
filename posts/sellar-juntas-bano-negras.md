@@ -3,7 +3,7 @@ title: "Cómo sellar las juntas del baño que se pusieron negras"
 description: "Guía paso a paso para argentinos: renová las juntas de silicona del baño que se llenaron de hongo negro sin llamar al plomero. Sacá la vieja, aplicá la nueva y dejá todo prolijo y libre de humedad."
 date: "2026-06-17"
 category: "humedad"
-image: ""
+image: "/images/sellar-juntas-bano-negras.jpg"
 ---
 
 ## Esas líneas negras en las juntas de la ducha
