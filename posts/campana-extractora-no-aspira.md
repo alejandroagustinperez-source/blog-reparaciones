@@ -3,7 +3,7 @@ title: "Por qué la campana extractora de la cocina no aspira bien"
 description: "Guía paso a paso para argentinos: solucioná la campana de la cocina que no saca el humo ni los olores sin llamar al técnico. Limpieza, ajustes y reparaciones que podés hacer vos mismo."
 date: "2026-06-18"
 category: "electrodomesticos"
-image: ""
+image: "/images/campana-extractora-no-aspira.jpg"
 ---
 
 ## La cocina se llena de humo cada vez que cocinás
