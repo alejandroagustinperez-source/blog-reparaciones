@@ -3,7 +3,7 @@ title: "Cómo arreglar un zócalo que se despegó de la pared"
 description: "Guía paso a paso para argentinos: arreglá los zócalos que se despegaron, están flojos o tienen la madera hinchada sin llamar al carpintero. Dejá las paredes prolijas con herramientas de tu casa."
 date: "2026-06-16"
 category: "carpinteria"
-image: ""
+image: "/images/arreglar-zocalo-despegado.jpg"
 ---
 
 ## Ese zócalo que está medio suelto desde la última limpieza
