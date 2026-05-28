@@ -3,7 +3,7 @@ title: "Cómo nivelar un mueble o electrodoméstico en piso irregular"
 description: "Guía paso a paso para argentinos: nivelá heladera, lavarropas, cocina, placard o cualquier mueble que baila en un piso desparejo. Aprendé a usar las patas ajustables y las cuñas sin llamar al técnico."
 date: "2026-06-19"
 category: "carpinteria"
-image: ""
+image: "/images/nivelar-mueble-piso-irregular.jpg"
 ---
 
 ## Ese mueble que baila cada vez que lo tocás
