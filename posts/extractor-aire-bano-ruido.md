@@ -3,7 +3,7 @@ title: "Por qué el extractor de aire del baño hace ruido y cómo arreglarlo"
 description: "Guía paso a paso para argentinos: arreglá el extractor de baño que suena como un tractor, que vibra, que no tira aire o que directamente dejó de andar. Todo sin llamar al técnico ni comprar uno nuevo."
 date: "2026-06-10"
 category: "electrodomesticos"
-image: ""
+image: "/images/extractor-aire-bano-ruido.jpg"
 ---
 
 ## Ese ruido infernal cada vez que prendés la luz del baño
