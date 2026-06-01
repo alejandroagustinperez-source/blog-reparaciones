@@ -3,7 +3,7 @@ title: "Cómo impermeabilizar una terraza sin contratar a nadie"
 description: "Guía paso a paso para argentinos: impermeabilizá tu terraza o balcón sin llamar al albañil. Sellá grietas, aplicá membrana y evitá filtraciones de agua. Ahorrate miles de pesos en mano de obra."
 date: "2026-06-11"
 category: "humedad"
-image: ""
+image: "/images/impermeabilizar-terraza.jpg"
 ---
 
 ## La gotera que baja del techo del living
