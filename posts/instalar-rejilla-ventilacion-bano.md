@@ -3,7 +3,7 @@ title: "Cómo instalar una rejilla de ventilación en el baño"
 description: "Guía paso a paso para argentinos: instalá una rejilla de ventilación en el baño para eliminar humedad, hongos y mal olor sin llamar al albañil. Todo explicado sin vueltas para que quede bien a la primera."
 date: "2026-06-13"
 category: "humedad"
-image: ""
+image: "/images/instalar-rejilla-ventilacion-bano.jpg"
 ---
 
 ## El baño siempre está lleno de vapor
