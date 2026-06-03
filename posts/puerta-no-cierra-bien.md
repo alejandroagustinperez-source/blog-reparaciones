@@ -3,7 +3,7 @@ title: "Por qué la puerta no cierra bien y cómo ajustarla vos mismo"
 description: "Guía paso a paso para argentinos: ajustá la puerta que no cierra, que arrastra o que está desalineada sin llamar al carpintero. Soluciones definitivas para puertas de madera y placa. Ahorrate la visita del técnico."
 date: "2026-06-06"
 category: "carpinteria"
-image: ""
+image: "/images/puerta-no-cierra-bien.jpg"
 ---
 
 ## Esa puerta que ya no quiere cerrar
