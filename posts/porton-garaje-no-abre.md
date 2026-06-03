@@ -3,7 +3,7 @@ title: "Cómo arreglar un portón de garaje que no abre"
 description: "Guía paso a paso para argentinos: solucioná el portón del garaje que no abre, que sube torcido o que hace ruido sin moverse. Problemas comunes y reparaciones que podés hacer vos mismo sin llamar al técnico."
 date: "2026-06-07"
 category: "carpinteria"
-image: ""
+image: "/images/porton-garaje-no-abre.jpg"
 ---
 
 ## El portón no abre y te quedaste en la calle
