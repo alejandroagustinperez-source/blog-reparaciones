@@ -4,6 +4,7 @@ description: "¿Las luces de tu casa parpadean sin motivo? Te explicamos las cau
 date: "2026-06-10"
 slug: "por-que-parpadean-las-luces"
 category: "electricidad"
+image: "/images/por-que-parpadean-las-luces.jpg"
 ---
 
 # Por qué parpadean las luces de la casa y cómo solucionarlo
