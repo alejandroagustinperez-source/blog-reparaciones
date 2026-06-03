@@ -3,7 +3,7 @@ title: "Cómo limpiar los desagües del baño antes de que se tapen"
 description: "Guía paso a paso para argentinos: mantené los desagües de la ducha, el lavamanos y el inodoro limpios y libres de obstrucciones. Aprendé a prevenir tapones antes de que el agua deje de escurrir. Ahorrate la visita del plomero."
 date: "2026-06-09"
 category: "plomeria"
-image: ""
+image: "/images/limpiar-desagues-bano.jpg"
 ---
 
 ## El agua ya no escurre como antes
