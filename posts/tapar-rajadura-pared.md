@@ -3,7 +3,7 @@ title: "Cómo tapar una rajadura en la pared paso a paso"
 description: "Guía completa para argentinos: repará las rajaduras de tus paredes sin llamar al albañil. Desde fisuras finas hasta grietas profundas, todo explicado sin vueltas para que quede como nuevo."
 date: "2026-06-08"
 category: "carpinteria"
-image: ""
+image: "/images/tapar-rajadura-pared.jpg"
 ---
 
 ## Esa rajadura que cada vez se ve más
