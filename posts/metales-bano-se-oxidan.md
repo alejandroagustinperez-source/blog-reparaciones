@@ -1,6 +1,6 @@
 ---
-title: "Por qué se oxidan los metales del baño y cómo evitarlo"
-description: "Guía para argentinos: descubrí por qué se oxidan las canillas, rejillas, toalleros y griferías del baño y aprendé a prevenirlo sin gastar en plomeros ni cambiar todo. Mantené los metales como nuevos."
+title: "Metales del baño oxidados: por qué pasa y cómo frenarlo de una vez"
+description: "Canilla, porta toallas, duchador... si los metales del baño se oxidan rápido, hay una causa concreta. Descubrí cuál es y cómo protegerlos sin gastar de más."
 date: "2026-06-14"
 category: "plomeria"
 image: "/images/metales-bano-se-oxidan.jpg"

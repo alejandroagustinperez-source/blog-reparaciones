@@ -1,6 +1,6 @@
 ---
-title: "Cómo arreglar una bisagra de puerta que rechina o se cayó"
-description: "Guía paso a paso para argentinos: arreglá las bisagras de las puertas que rechínan, están flojas o se cayeron sin llamar al carpintero. Soluciones fáciles para que las puertas cierren sin ruido ni esfuerzo."
+title: "Bisagra de puerta caída o que rechina: cómo arreglarla sin llamar a nadie"
+description: "¿La puerta no cierra bien o hace ruido al abrirla? Arreglá la bisagra en menos de 20 minutos con herramientas básicas. Guía paso a paso para Argentina."
 date: "2026-06-12"
 category: "carpinteria"
 image: "/images/arreglar-bisagra-puerta-rechina.jpg"
