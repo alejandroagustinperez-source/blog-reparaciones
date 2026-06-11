@@ -12,7 +12,7 @@ type Producto = {
 };
 
 const AFILIADO_PARAMS =
-  "?matt_tool=97247845&matt_word=&matt_source=google&matt_campaign=&matt_ad_type=&matt_ad_id=peal2834773";
+  "?matt_word=peal2834773&matt_tool=87059659";
 
 function formatearPrecio(precio: number) {
   return new Intl.NumberFormat("es-AR", {
