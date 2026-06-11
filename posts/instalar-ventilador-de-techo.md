@@ -4,6 +4,7 @@ description: "Instalar un ventilador de techo es más fácil de lo que parece. G
 date: "2026-06-05"
 slug: "instalar-ventilador-de-techo"
 category: "electricidad"
+image: "/images/instalar-ventilador-de-techo.jpg"
 ---
 
 # Cómo instalar un ventilador de techo paso a paso
