@@ -3,7 +3,7 @@ title: "Cómo arreglar una persiana de enrollar que no sube ni baja"
 description: "Guía paso a paso para argentinos: repará la persiana que se trabó sin llamar al técnico. Desde la cinta rota hasta el tambor trabado, todo explicado sin vueltas. Ahorrate la visita del persianero."
 date: "2026-06-04"
 category: "carpinteria"
-image: ""
+image: "/images/arreglar-persiana-enrollar.jpg"
 ---
 
 ## Esa persiana que se quedó a media altura
