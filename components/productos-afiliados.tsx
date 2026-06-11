@@ -15,6 +15,7 @@ export default function ProductosAfiliados({ keywords }: { keywords: string }) {
         Encontrá los mejores productos para este trabajo en MercadoLibre
       </p>
       
+        <a
         href={searchUrl}
         target="_blank"
         rel="noopener noreferrer"
