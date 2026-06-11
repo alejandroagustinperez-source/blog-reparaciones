@@ -7,6 +7,7 @@ import { ReadingProgress } from "@/components/reading-progress";
 import { TableOfContents } from "@/components/table-of-contents";
 import { HelpfulButtons } from "@/components/helpful-buttons";
 import { RelatedPosts } from "@/components/related-posts";
+import { ProductosAfiliados } from "@/components/productos-afiliados";
 
 const siteUrl = "https://blog.reparacionessimplesdelhogar.com.ar";
 
@@ -54,6 +55,17 @@ export default async function BlogPostPage({ params }: Props) {
 
   const headings = getHeadings(post.content);
   const label = catLabelBanner[post.category] ?? "GUÍA PRÁCTICA";
+
+  const categoryKeywords: Record<string, string> = {
+    plomeria: "herramientas plomeria",
+    electricidad: "herramientas electricidad",
+    carpinteria: "herramientas carpinteria",
+    pintura: "pintura paredes rodillo",
+    impermeabilizacion: "impermeabilizante techo",
+  };
+
+  const searchKeywords =
+    categoryKeywords[post.category] ?? post.title;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -142,6 +154,8 @@ export default async function BlogPostPage({ params }: Props) {
             <div className="article-content mx-auto max-w-[700px]">
               <Markdown content={post.content} />
             </div>
+
+            <ProductosAfiliados keywords={searchKeywords} />
 
             <div className="mx-auto mt-8 max-w-[700px]">
               <HelpfulButtons />
