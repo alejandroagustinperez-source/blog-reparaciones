@@ -67,6 +67,8 @@ export default async function BlogPostPage({ params }: Props) {
   const searchKeywords =
     categoryKeywords[post.category] ?? post.title;
 
+  console.log("[BlogPostPage] slug:", slug, "category:", post.category, "searchKeywords:", searchKeywords);
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
