@@ -37,9 +37,7 @@ export function ProductosAfiliados({
     let cancel = false;
     setError(false);
 
-    fetch(
-      `https://api.mercadolibre.com/sites/MLA/search?q=${encodeURIComponent(keywords)}&limit=${cantidad}`
-    )
+    fetch(`/api/productos-ml?q=${encodeURIComponent(keywords)}`)
       .then((res) => res.json())
       .then((data) => {
         if (cancel) return;
