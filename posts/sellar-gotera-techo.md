@@ -3,7 +3,7 @@ title: "Cómo sellar una gotera en el techo antes de que llueva"
 description: "Guía paso a paso para argentinos: repará las goteras del techo antes de la próxima tormenta. Soluciones temporales y definitivas para chapas, losas y techos de tejas. Ahorrate la visita del techista."
 date: "2026-06-02"
 category: "carpinteria"
-image: ""
+image: "/images/sellar-gotera-techo.jpg"
 ---
 
 ## Esa mancha en el cielorraso que crece cuando llueve
