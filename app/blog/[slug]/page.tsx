@@ -56,16 +56,33 @@ export default async function BlogPostPage({ params }: Props) {
   const headings = getHeadings(post.content);
   const label = catLabelBanner[post.category] ?? "GUÍA PRÁCTICA";
 
+  function normalizarCategoria(cat: string) {
+    return cat
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+  }
+
   const categoryKeywords: Record<string, string> = {
     plomeria: "herramientas plomeria",
     electricidad: "herramientas electricidad",
     carpinteria: "herramientas carpinteria",
     pintura: "pintura paredes rodillo",
     impermeabilizacion: "impermeabilizante techo",
+    electrodomesticos: "repuestos electrodomesticos hogar",
+    humedad: "impermeabilizante humedad paredes",
+    ventilacion: "ventilacion extractor hogar",
+    puertas: "herrajes puertas hogar",
+    pisos: "adhesivo piso ceramica",
+    techos: "impermeabilizante techo",
+    cerrajeria: "cerraduras manijas puertas",
+    jardin: "herramientas jardin",
+    gas: "herramientas gas hogar",
   };
 
+  const cat = normalizarCategoria(post.category);
   const searchKeywords =
-    categoryKeywords[post.category] ?? post.title;
+    categoryKeywords[cat] ?? cat;
 
   console.log("[BlogPostPage] slug:", slug, "category:", post.category, "searchKeywords:", searchKeywords);
 
