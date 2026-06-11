@@ -3,7 +3,7 @@ title: "Por qué se pela la pintura de las paredes y cómo solucionarlo"
 description: "Guía paso a paso para argentinos: repará las paredes con pintura descascarada sin tener que revocar todo. Soluciones definitivas para que la pintura nueva dure años. Ahorrate la visita del pintor."
 date: "2026-06-03"
 category: "carpinteria"
-image: ""
+image: "/images/pintura-paredes-se-pela.jpg"
 ---
 
 ## Esa pared que parece un mapa del tesoro
