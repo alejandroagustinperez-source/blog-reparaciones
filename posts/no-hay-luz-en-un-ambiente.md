@@ -4,6 +4,7 @@ description: "Si se fue la luz en una sola habitación pero el resto de la casa 
 date: "2026-06-01"
 slug: "no-hay-luz-en-un-ambiente"
 category: "electricidad"
+image: "/images/no-hay-luz-en-un-ambiente.jpg"
 ---
 
 # Qué hacer cuando no hay luz en un solo ambiente
