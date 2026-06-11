@@ -3,7 +3,7 @@ title: "Cómo reparar una cerradura que no cierra bien"
 description: "Guía paso a paso para argentinos: arreglá la cerradura de tu puerta sin llamar al cerrajero. Desde el pestillo trabado hasta la llave que no gira, todo explicado sin vueltas. Ahorrate entre $15.000 y $30.000 en la visita."
 date: "2026-06-05"
 category: "carpinteria"
-image: ""
+image: "/images/reparar-cerradura-no-cierra.jpg"
 ---
 
 ## Esa puerta que ya no cierra como antes
