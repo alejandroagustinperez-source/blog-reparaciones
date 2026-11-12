@@ -1,0 +1,16 @@
+{
+  "name": "2026-11-11_lavarropas-no-centrifuga",
+  "photo": "photo.jpg",
+  "hook": ["¿Tu lavarropas", "NO centrifuga?"],
+  "chip": "…y la ropa sale chorreando",
+  "steps": [
+    {"icon": "dial", "title": "Revisá el programa", "sub": "Que no esté en “sin centrifugado”."},
+    {"icon": "drum", "title": "Repartí la ropa", "sub": "Que no quede hecha un bollo en el tambor."},
+    {"icon": "filter", "title": "Limpiá el filtro", "sub": "El de desagüe: ahí se traban pelusas y monedas."}
+  ],
+  "url": "blog.reparacionessimplesdelhogar.com.ar",
+  "scenes": [[0, "hook"], [4.2, "before"], [6.6, "step1"], [9.6, "step2"], [12.8, "step3"], [15.5, "time"], [18.6, "cta"]],
+  "total": 26.0,
+  "vo_start": 0.0,
+  "cover_t": 2.9
+}
