@@ -13,19 +13,19 @@ type PostCardProps = {
 
 export function PostCard({ slug, title, description, date, category, readingTime, image }: PostCardProps) {
   return (
-    <article className="group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition-all hover:-translate-y-0.5 hover:shadow-md">
+    <article className="post-card group flex w-full flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-200 hover:shadow-xl hover:shadow-[#1e3a5f]/15">
       <Link href={`/blog/${slug}`} className="relative block h-48 overflow-hidden">
         {image ? (
           <img
             src={image}
             alt={getCategoryLabel(category)}
-            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
             loading="lazy"
           />
         ) : (
           <CategoryIcon category={category} className="h-full w-full" />
         )}
-        <span className="absolute top-3 left-3">
+        <span className="absolute top-3 left-3 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-105">
           <CategoryBadge category={category} />
         </span>
       </Link>
@@ -46,7 +46,7 @@ export function PostCard({ slug, title, description, date, category, readingTime
             className="inline-flex items-center gap-1 text-sm font-medium text-[#f97316] hover:text-[#ea580c] transition-colors"
           >
             Leer más
-            <span className="text-base leading-none">→</span>
+            <span className="go-arrow text-base leading-none">→</span>
           </Link>
         </div>
       </div>

@@ -120,7 +120,7 @@ export default async function BlogPostPage({ params }: Props) {
           <img
             src={post.image}
             alt={post.title}
-            className="h-full w-full object-cover"
+            className="kenburns h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           <div className="absolute bottom-6 left-1/2 w-full max-w-6xl -translate-x-1/2 px-6">
@@ -137,7 +137,7 @@ export default async function BlogPostPage({ params }: Props) {
       <div className="mx-auto max-w-6xl px-6 py-8">
         <div className="lg:grid lg:grid-cols-[1fr_220px] lg:gap-12">
           <article className="min-w-0">
-            <header>
+            <header className="fade-up">
               <div className="flex flex-wrap items-center gap-3 text-sm">
                 <span className="rounded-full bg-[#f97316] px-3 py-1 text-xs font-semibold text-white">
                   {label}

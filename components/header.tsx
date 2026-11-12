@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 const navLinks = [
@@ -13,14 +13,22 @@ const navLinks = [
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
+    <header className={`sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur transition-shadow duration-300 supports-[backdrop-filter]:bg-white/80 ${scrolled ? "shadow-[0_6px_24px_rgba(30,58,95,0.12)]" : ""}`}>
       <div className="mx-auto flex h-auto min-h-16 max-w-6xl items-center justify-between px-4 py-2 sm:h-16 sm:py-0">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 flex-shrink-0">
-          <span className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-lg bg-[#1e3a5f] flex-shrink-0">
+        <Link href="/" className="group flex items-center gap-2.5 flex-shrink-0">
+          <span className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-lg bg-[#1e3a5f] flex-shrink-0 transition-transform duration-500 group-hover:-rotate-[24deg] group-hover:scale-110">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
             </svg>
@@ -35,9 +43,9 @@ export function Header() {
         <nav className="hidden lg:flex items-center gap-5 text-sm font-medium text-gray-600">
           {navLinks.map((link) =>
             link.external ? (
-              <a key={link.href} href={link.href} className={`hover:text-[#f97316] transition-colors ${link.label === "Blog" ? "text-[#f97316]" : ""}`}>{link.label}</a>
+              <a key={link.href} href={link.href} className={`nav-link hover:text-[#f97316] transition-colors ${link.label === "Blog" ? "text-[#f97316]" : ""}`}>{link.label}</a>
             ) : (
-              <Link key={link.href} href={link.href} className="text-[#f97316] transition-colors">{link.label}</Link>
+              <Link key={link.href} href={link.href} className="nav-link text-[#f97316] transition-colors">{link.label}</Link>
             )
           )}
         </nav>
@@ -65,11 +73,11 @@ export function Header() {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="lg:hidden border-t border-gray-200 bg-white px-4 py-3 flex flex-col gap-2 shadow-lg">
-          {navLinks.map((link) =>
+          {navLinks.map((link, k) =>
             link.external ? (
-              <a key={link.href} href={link.href} className="py-2.5 text-sm font-medium text-gray-700 hover:text-[#f97316] border-b border-gray-100 last:border-0" onClick={() => setMenuOpen(false)}>{link.label}</a>
+              <a key={link.href} style={{ ["--k"]: k } as React.CSSProperties} href={link.href} className="mnav-item py-2.5 text-sm font-medium text-gray-700 hover:text-[#f97316] border-b border-gray-100 last:border-0" onClick={() => setMenuOpen(false)}>{link.label}</a>
             ) : (
-              <Link key={link.href} href={link.href} className="py-2.5 text-sm font-medium text-[#f97316] border-b border-gray-100 last:border-0" onClick={() => setMenuOpen(false)}>{link.label}</Link>
+              <Link key={link.href} style={{ ["--k"]: k } as React.CSSProperties} href={link.href} className="mnav-item py-2.5 text-sm font-medium text-[#f97316] border-b border-gray-100 last:border-0" onClick={() => setMenuOpen(false)}>{link.label}</Link>
             )
           )}
           <a
