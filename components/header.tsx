@@ -5,7 +5,6 @@ import Link from "next/link";
 const navLinks = [
   { label: "Inicio", href: "https://reparacionessimplesdelhogar.com.ar", external: true },
   { label: "Blog", href: "/blog", external: false },
-  { label: "Herramientas", href: "https://reparacionessimplesdelhogar.com.ar/herramientas", external: true },
   { label: "Ebook", href: "https://reparacionessimplesdelhogar.com.ar/ebook", external: true },
   { label: "Contacto", href: "https://reparacionessimplesdelhogar.com.ar/contacto", external: true },
   { label: "Planes para Profesionales", href: "https://reparacionessimplesdelhogar.com.ar/profesionales", external: true },

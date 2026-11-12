@@ -24,7 +24,6 @@ export function Footer() {
             <ul className="mt-4 space-y-2">
               <li><a href="https://reparacionessimplesdelhogar.com.ar" className="text-sm text-gray-400 hover:text-white transition-colors">Inicio</a></li>
               <li><Link href="/blog" className="text-sm text-gray-400 hover:text-white transition-colors">Blog</Link></li>
-              <li><a href="https://reparacionessimplesdelhogar.com.ar/herramientas" className="text-sm text-gray-400 hover:text-white transition-colors">Herramientas</a></li>
               <li><a href="https://reparacionessimplesdelhogar.com.ar/ebook" className="text-sm text-gray-400 hover:text-white transition-colors">Ebook</a></li>
               <li><a href="https://reparacionessimplesdelhogar.com.ar/contacto" className="text-sm text-gray-400 hover:text-white transition-colors">Contacto</a></li>
             </ul>
