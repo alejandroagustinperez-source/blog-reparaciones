@@ -143,17 +143,20 @@ def draw_wrench(d, cx, cy, s, fill, bg):
 
 @functools.lru_cache(maxsize=8)
 def logo_layer(size):
-    ss = 3; S = size * ss
-    img = Image.new("RGBA", (S, S), (0, 0, 0, 0)); d = ImageDraw.Draw(img)
-    d.rounded_rectangle((0, 0, S, S), S * 0.24, fill=NAVY + (255,))
-    draw_wrench(d, S * 0.46, S * 0.56, S * 0.95, WHITE + (255,), NAVY + (255,))
+    img = Image.open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "logo.png")).convert("RGBA")
+    ImageDraw.Draw(img).rounded_rectangle((7, 7, 504, 504), 114, outline=(255, 255, 255, 150), width=14)
     return img.resize((size, size), Image.LANCZOS)
 
 
+def txt_left(base, s, fpath, size, fill, x, cy, alpha=1.0):
+    lay = text_layer(s, fpath, size, tuple(fill), False)
+    put(base, lay, x - 24 + lay.width / 2, cy, 1.0, alpha)
+
+
 def brand_bar(im, t, alpha=1.0):
-    put(im, logo_layer(84), 100, 150, alpha=alpha)
-    txt(im, "Reparaciones Simples", FP, 34, WHITE, 395, 133, alpha=alpha, shadow=False)
-    txt(im, "del Hogar", FP, 34, ORANGE, 283, 172, alpha=alpha, shadow=False)
+    put(im, logo_layer(100), 110, 150, alpha=alpha)
+    txt_left(im, "Reparaciones Simples", FP, 36, WHITE, 180, 132, alpha)
+    txt_left(im, "del Hogar", FP, 36, ORANGE, 180, 174, alpha)
 
 
 # ----------------------------------------------------------------- íconos
