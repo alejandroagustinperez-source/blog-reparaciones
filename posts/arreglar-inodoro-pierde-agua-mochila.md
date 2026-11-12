@@ -3,7 +3,7 @@ title: "Cómo arreglar un inodoro que pierde agua por la mochila sin llamar al p
 description: "Guía paso a paso para argentinos: repará la pérdida de agua de tu inodoro en 20 minutos con herramientas básicas. Ahorrate entre $15.000 y $35.000 en la visita del plomero."
 date: "2026-05-27"
 category: "plomeria"
-image: ""
+image: "/images/arreglar-inodoro-pierde-agua-mochila.jpg"
 ---
 
 ## El ruido que te está haciendo perder plata

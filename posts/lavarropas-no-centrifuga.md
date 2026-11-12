@@ -4,6 +4,7 @@ description: "¿Tu lavarropas no centrifuga y la ropa sale empapada? Conocé las
 date: "2026-11-11"
 slug: "lavarropas-no-centrifuga"
 category: "electrodomesticos"
+image: "/images/lavarropas-no-centrifuga.jpg"
 ---
 
 # Lavarropas que no centrifuga: por qué pasa y cómo solucionarlo

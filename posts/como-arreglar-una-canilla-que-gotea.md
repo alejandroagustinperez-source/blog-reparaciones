@@ -3,6 +3,7 @@ title: "Cómo arreglar una canilla que gotea"
 description: "¿Tenés una canilla que no para de gotear? Aprendé a repararla vos mismo cambiando los flexibles, la roldana o el cuerito. Ahorrá agua y plata."
 date: "2026-05-01"
 slug: "como-arreglar-una-canilla-que-gotea"
+image: "/images/como-arreglar-una-canilla-que-gotea.jpg"
 ---
 
 # Cómo arreglar una canilla que gotea
