@@ -4,6 +4,7 @@ description: "Si te preguntás por qué salta la térmica, acá van las causas m
 date: "2026-11-14"
 slug: "por-que-salta-la-termica"
 category: "electricidad"
+image: "/images/por-que-salta-la-termica.jpg"
 ---
 
 # Por qué salta la térmica y cómo solucionarlo sin riesgos

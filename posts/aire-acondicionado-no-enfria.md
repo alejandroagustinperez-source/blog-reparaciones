@@ -4,6 +4,7 @@ description: "El aire acondicionado no enfría: descubrí las causas más comune
 date: "2026-11-14"
 slug: "aire-acondicionado-no-enfria"
 category: "electrodomesticos"
+image: "/images/aire-acondicionado-no-enfria.jpg"
 ---
 
 # Por qué el aire acondicionado no enfría y cómo solucionarlo

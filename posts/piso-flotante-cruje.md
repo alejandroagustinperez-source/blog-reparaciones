@@ -3,7 +3,7 @@ title: "Por qué el piso flotante cruje y cómo arreglarlo sin cambiarlo"
 description: "Guía paso a paso para argentinos: eliminá los ruidos del piso flotante sin tener que cambiarlo. Soluciones definitivas para pisos de casas y departamentos. Ahorrate la visita del técnico."
 date: "2026-06-01"
 category: "carpinteria"
-image: ""
+image: "/images/piso-flotante-cruje.jpg"
 ---
 
 ## Ese ruido que te vuelve loco
