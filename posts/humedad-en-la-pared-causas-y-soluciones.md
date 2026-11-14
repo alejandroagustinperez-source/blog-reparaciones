@@ -4,6 +4,7 @@ description: "Humedad en la pared: aprendé a distinguir si es por filtración, 
 date: "2026-11-12"
 slug: "humedad-en-la-pared-causas-y-soluciones"
 category: "humedad"
+image: "/images/humedad-en-la-pared-causas-y-soluciones.jpg"
 ---
 
 # Humedad en la pared: cómo saber de dónde viene y cómo eliminarla
