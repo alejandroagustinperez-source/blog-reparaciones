@@ -4,6 +4,7 @@ description: "Cómo sacar el olor a humedad de la casa, el placard y la ropa: en
 date: "2026-11-14"
 slug: "como-sacar-el-olor-a-humedad"
 category: "humedad"
+image: "/images/como-sacar-el-olor-a-humedad.jpg"
 ---
 # Cómo sacar el olor a humedad de la casa, el placard y la ropa
 

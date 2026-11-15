@@ -4,6 +4,7 @@ description: "Un inodoro que pierde agua puede desperdiciar cientos de litros po
 date: "2026-05-28"
 slug: "inodoro-pierde-agua"
 category: "plomeria"
+image: "/images/inodoro-pierde-agua.jpg"
 ---
 
 # Por qué el inodoro pierde agua constantemente y cómo arreglarlo

@@ -4,6 +4,7 @@ description: "Si tu calefón no enciende cuando abrís la canilla de agua fría,
 date: "2026-05-22"
 slug: "calefon-no-enciende-agua-fria"
 category: "gas"
+image: "/images/calefon-no-enciende-agua-fria.jpg"
 ---
 
 # Por qué el calefón no enciende con agua fría
