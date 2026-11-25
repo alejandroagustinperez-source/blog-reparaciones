@@ -52,7 +52,7 @@ A veces no sube nada: el agua entra desde afuera. Revisá estos puntos antes de 
 - **Nivel del piso de afuera** más alto que el piso interior, de modo que el agua se apoya contra el muro.
 - **Riego por aspersión** o manguerazos constantes contra la pared.
 
-Qué hacer: limpiá y reparás las canaletas, desviá el agua del muro, sellá fisuras y corregí las pendientes del piso exterior para que el agua se aleje de la casa. En ese caso, lo habitual es que el salitre deje de formarse con el tiempo, ya que corregís la entrada de agua.
+Qué hacer: limpiá y reparalas si están rotas, desviá el agua del muro, sellá fisuras y corregí las pendientes del piso exterior para que el agua se aleje de la casa. En ese caso, lo habitual es que el salitre deje de formarse con el tiempo, ya que corregís la entrada de agua.
 
 ## 4. Tercera causa: pérdida de un caño o de una instalación
 
